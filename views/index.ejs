@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Document</title>
+	</head>
+	<body class="flex">
+		<div class="list">
+			<h1>To-do List</h1>
+			<ul class="toList flex">
+				<% for(let i=0; i < toDo.length; i++){%>
+				<li class="tasks">
+					<input
+						class="editTask hidden"
+						type="text"
+						placeholder="Edit Task"
+					/>
+					<span class="task"><%= toDo[i].taskName %></span>
+					<div class="functions flex">
+						<span class="edit button">Edit</span>
+						<span class="save button hidden">Save</span>
+						<span class="delete button">Delete</span>
+					</div>
+				</li>
+				<%}%>
+			</ul>
+			<p>Add a task:</p>
+			<form action="/addTask" method="POST">
+				<input
+					class="addTask"
+					type="text"
+					placeholder="Add Task"
+					name="Task"
+				/>
+				<input type="submit" />
+			</form>
+		</div>
+		<script src="js/main.js"></script>
+	</body>
+</html>

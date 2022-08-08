@@ -1,0 +1,115 @@
+* {
+	box-sizing: border-box;
+	font-size: 24px;
+}
+
+/* Body */
+body {
+	height: 100vh;
+
+	justify-content: center;
+	align-items: center;
+
+	font-family: "Roboto", sans-serif;
+
+	background-color: black;
+}
+
+/* To Do list */
+.list {
+	flex-direction: column;
+	align-items: center;
+
+	width: 500px;
+
+	padding: 1em;
+	background-color: lightgray;
+}
+
+/* List */
+.toList {
+	width: 100%;
+	padding: 1em 0.25em 1em 1em;
+
+	flex-direction: column;
+	gap: 1em;
+
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+
+	list-style-type: circle;
+}
+
+/* Tasks */
+.tasks {
+	width: 100%;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.task {
+	padding-bottom: 0.35em;
+}
+
+/* Editing Input */
+.editTask {
+	width: 100%;
+	text-overflow: ellipsis;
+}
+
+.functions {
+	width: 40%;
+	margin-top: 0.75rem;
+	justify-content: space-between;
+}
+
+/* Edit Button */
+.edit {
+	background-color: lightblue;
+}
+
+.edit:hover {
+	background-color: rgb(114, 143, 153);
+}
+
+/* Delete Button */
+.delete {
+	background-color: rgb(175, 27, 27);
+}
+
+.delete:hover {
+	background-color: rgb(209, 60, 60);
+}
+
+/* Save Button */
+.save {
+	background-color: lightcoral;
+}
+.save:hover {
+	background-color: rgb(165, 89, 89);
+}
+
+/* Utility Classes */
+.flex {
+	display: flex;
+}
+
+.grid {
+	display: grid;
+}
+
+.button {
+	padding: 0.35em;
+
+	border-radius: 5px;
+}
+
+.button:hover {
+	cursor: pointer;
+	transition: background-color 0.5s;
+}
+
+.hidden {
+	display: none;
+}
